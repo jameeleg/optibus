@@ -14,7 +14,7 @@ $ npm start
 ```
 Test dev server by going to http://localhost:3000
 You should see
-````
+```
 Express
 Welcome to Express
 
