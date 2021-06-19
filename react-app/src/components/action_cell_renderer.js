@@ -1,6 +1,5 @@
 import Button from '@material-ui/core/Button';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
-import Radio from '@material-ui/core/Radio';
 
 export const actionCellRenderer = (
 	assoc,

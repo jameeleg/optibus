@@ -30,29 +30,6 @@ export const Tasks = (props) => {
 						props.removeAssignment(removeParams)
 					}
 				)
-				// const driverId = props.taskToDriver[task.lineId];
-				// if(driverId){
-				// 	const driver = getDriverById(driverId);
-				// 	const name = driver? driver.name : '';
-				// 	return 	<div className="task-or-driver-name">
-				// 				<span>{name}</span>
-				// 			 	{!props.viewOnly && !props.driverSelected  && <HighlightOffIcon
-				// 			 			className="remove-icon" 
-				// 				 		onClick={(e) => {
-				// 				 		e.stopPropagation();
-				// 				 		props.removeAssignment(driver, task)  
-				// 		 			}}
-				// 			 		fontSize={'small'}/>
-				// 		 		}
-				// 		 	</div>;
-				// }
-
-				// if (props.viewOnly){
-				// 	return '-'
-				// }
-
-				// return <Button className="btn-add-task" color="primary">+ Driver</Button>
-				
 			case 'Task Id':
 				return task.lineDisplayId;
 			case 'Day1':
@@ -75,7 +52,7 @@ export const Tasks = (props) => {
 		}
 	}
 
-	const isTaskSelectable = (task) => props.taskToDriver[task.lineId] == undefined
+	const isTaskSelectable = (task) => props.taskToDriver[task.lineId] === undefined
 	const getDriverById = (driverId) => {
 		const ds = props.drivers.filter(d => d.id === driverId);
 		if(ds.length === 0){

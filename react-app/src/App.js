@@ -5,11 +5,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 
-import Button from '@material-ui/core/Button';
-import {Table} from './table'
 import {ButtonAppBar} from './components/bar';
 import {Drivers} from './components/drivers';
 import {Tasks} from './components/tasks';
@@ -31,7 +28,8 @@ function App() {
   // Notifications management
   const [alert, setAlert] = React.useState({open: false, msg: '', severity: ''}); 
 
-  useEffect(async () => {
+  useEffect(() => {
+    async function fetchData() {
       fetch('http://localhost:3000/drivers')
       .then(res => res.json())
       .then(data => setDrivers(data))
@@ -49,6 +47,8 @@ function App() {
         setDriverToTask(data.driverToTask);
       })
       .catch(e => setAlert({open: true, msg: 'Failed to fetch assocs !', severity: 'error'}));
+    }
+    fetchData();
   }, []);
 
   const handleClose = (event, reason) => {

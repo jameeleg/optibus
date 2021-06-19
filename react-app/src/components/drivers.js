@@ -42,7 +42,7 @@ export const Drivers = (props) => {
 		return ts[0];
 	}
 
-	const isDriverSelectable = (driver) => props.driverToTask[driver.id] == undefined
+	const isDriverSelectable = (driver) => props.driverToTask[driver.id] === undefined
 
 	return 	<SmartTable 
 				data={props.drivers}

@@ -40,9 +40,6 @@ export const SmartTable = (props) => {
 		const isRowSelectable = props.isRowSelectable(row);
 		const isRowSelected = props.selectedRow && rowId === props.getIdForRow(props.selectedRow)
 
-		let cls = '';
-
-
 		const onClick = e => {
 			e.stopPropagation();
 			props.onSelect(row);
