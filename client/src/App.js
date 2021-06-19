@@ -8,9 +8,9 @@ import {
 } from "react-router-dom";
 
 import {ButtonAppBar} from './components/bar';
-import {Drivers} from './components/drivers';
-import {Tasks} from './components/tasks';
-import {Assignment} from './components/assignment';
+import {Drivers} from './pages/drivers';
+import {Tasks} from './pages/tasks';
+import {Assignment} from './pages/assignment';
 import {Notifications} from './components/notifications';
 
 
