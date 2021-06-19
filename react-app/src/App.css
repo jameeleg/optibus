@@ -1,0 +1,63 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.App > * {
+  display: flex;
+  width: 100%;
+  align-self: center;
+  justify-content: center;
+}
+
+
+.assignment { 
+  max-height: 600px;  
+  display: flex;
+  justify-content: space-between;
+  margin: 0 16px;
+
+}
+.assignment .drivers-section {
+  flex: 2;
+  overflow: auto;
+}
+.assignment .tasks-section{
+  flex: 3;
+  margin-left: 32px;
+  overflow: auto;
+
+}
+
+
+.row-selectable:hover {
+  background-color: #e9e6e6;
+  cursor: pointer;
+}
+
+.MuiTableRow-root.selected-row {
+  background-color: #a6aaa6;
+}
+
+.MuiTableRow-root {
+  height: 80px;
+}
+
+
+.task-or-driver-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.drivers-table, .tasks-table {
+  padding: 0 16px;
+}
+
+.remove-icon {
+  cursor: pointer;
+}
+/*.edit-column.MuiTableCell-root {
+  background-color: #ecf0df;
+}
+*/

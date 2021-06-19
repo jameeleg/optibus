@@ -4,7 +4,7 @@ const services = require('./../services/index');
 const {dbService} = services
 
 
-/* GET users listing. */
+/* GET drivers listing. */
 router.get('/', function(req, res, next) {
 	try {
 		res.send(dbService.getDrivers());
